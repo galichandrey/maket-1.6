@@ -1,0 +1,30 @@
+.divider {
+  display: flex;
+
+  &--left {
+    background-image: url("../img/divider.svg");
+    background-position: 0;
+    background-repeat: no-repeat;
+    border: 0;
+    width: 2px;
+    height: 32px;
+    overflow: hidden;
+  }
+
+
+  &--right {
+    background-image: url("../img/divider.svg");
+    background-position: 0;
+    background-repeat: no-repeat;
+    border: 0;
+    width: 2px;
+    height: 32px;
+    overflow: hidden;
+
+    @media screen and (min-width: $breakpoint_note) {
+      display: none;
+    }
+  }
+}
+
+

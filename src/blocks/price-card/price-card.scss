@@ -1,0 +1,60 @@
+.price-card{
+
+  &__name {
+    min-width: 80px;
+    flex-basis: 0;
+    flex-grow: 5;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: 80px;
+    }
+
+    // &:before {
+    //   content: attr(data-title);
+    //   flex-basis: 80px;
+    //   font-size: 14px;
+    //   line-height: 16px;
+    //   color: #7E7E82;
+    //   word-wrap: normal;
+    // }
+
+  }
+
+  &__price {
+    min-width: 80px;
+    flex-basis: 0;
+    flex-grow: 0.5;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: 80px;
+    }
+  }
+
+  &__time {
+    min-width: 80px;
+    flex-basis: 0;
+    flex-grow: 0.5;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: 80px;
+    }
+  }
+
+  &__button-field {
+    min-width: 80px;
+    flex-basis: 0;
+    flex-grow: 0.5;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: 80px;
+    }
+  }
+
+  &__button {
+    background-color: #ff3e79;
+    border-radius: 16px;
+    width: 119px;
+    height: 32px;
+  }
+
+}

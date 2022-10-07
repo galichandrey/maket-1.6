@@ -1,0 +1,45 @@
+/* language*/
+
+.language {
+  display: flex;
+  flex-direction: row;
+
+  padding-top: 40px;
+  color: #1B1C21;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 24px;
+}
+
+.language--inner {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+// .language__ru {
+
+// }
+
+// .language__ru--active {
+
+// }
+
+.language__link {
+  color: #1B1C21;
+}
+
+.language__link--active {
+  color: #7E7E82;
+}
+
+// .language__en {
+
+// }
+
+
+
+// .language__ch {
+
+// }

@@ -1,0 +1,209 @@
+.side_menu {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  left: 500px;
+  z-index: 2;
+  width: 320px;
+  // height: 100%;
+  max-height: 840px;
+  height: 100vh;
+
+  background-color: #fff;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+
+  // @media screen and (min-width: $breakpoint_smartphone) {
+  position: absolute;
+  // z-index: 2;
+  top: 0;
+  left: 0;
+  // }
+
+  @media screen and (max-width: 360px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: $breakpoint_note) {
+    box-shadow: 20px 0 25px -10px #1b1c21;
+  }
+
+  @media screen and (min-width: $breakpoint_note) {
+    display: flex;
+    position: static;
+    top: 0;
+    z-index: 1;
+    flex-direction: column;
+    background-color: #fff;
+    width: 320px;
+    // justify-content: space-between;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2;
+    max-height: 100vh;
+    height: 100vh;
+  }
+
+  &__inner {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: #ff3e79;
+    gap: 20px;
+    width: 320px;
+    height: 100%;
+    // box-shadow: 10px 0 10px -5px #d6d6d6;
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      position: absolute;
+      right: 0px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: #ff3e79;
+      gap: 20px;
+      width: 440px;
+      /* height: 100vh; */
+      height: 100%;
+      // box-shadow: -5px 0 5px 0 #d6d6d6;
+    }
+  }
+
+  &--closed {
+    transform: translateX(-600px);
+    /* transition-delay: 1000ms; */
+    transition-duration: 1000ms;
+    // transition-timing-function: ease;
+    /* translateX display:none; */
+
+    @media screen and (min-width: 1366px) {
+      transform: translateX(-600px);
+      transition-duration: 0ms;
+    }
+  }
+
+  &--opened {
+    transform: translateX(0px);
+    /* transition-delay: 1000ms; */
+    transition-duration: 1000ms;
+    // transition-timing-function: ease;
+    /* translateX display:none; */
+
+    @media screen and (min-width: 1366px) {
+      transform: translateX(0px);
+      transition-duration: 0ms;
+    }
+  }
+}
+
+/* внутрянка side_menu */
+
+.side_menu_header {
+  display: flex;
+  height: 88px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.side_menu_header__group {
+  display: flex;
+  height: 88px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.side_menu_main {
+  display: flex;
+  flex-direction: column;
+  // flex-grow: 1;
+  // flex-shrink: 1;
+  // flex-basis: 0%;
+  padding-top: 15px;
+  gap: 15px;
+}
+
+.side_menu_list {
+  // flex-grow: 1;
+  // flex-shrink: 1;
+  // flex-basis: 0%;
+
+  &__item {
+    display: flex;
+    color: #1b1c21;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2;
+    padding-left: 24px;
+    align-items: center;
+    height: 35px;
+
+    // flex-grow: 1;
+    // flex-shrink: 1;
+    // flex-basis: 0%;
+    // flex-shrink: 1;
+
+    @media screen and (min-height: 677px) {
+      // height: 3.5rem;
+      height: 50px;
+
+    }
+  }
+
+
+  &__item:hover {
+    background-image: url("../img/highlight.svg");
+    background-repeat: no-repeat;
+    background-position: center left;
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+  }
+
+  &__item--active {
+    background-image: url("../img/highlight.svg");
+    background-repeat: no-repeat;
+    background-position: center left;
+  }
+
+  &__link {
+    color: #1b1c21;
+    transition: opacity 0.5s ease;
+    letter-spacing: -0.2px;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  &__link:hover {
+    opacity: 0.8;
+    transition: opacity 0.5s ease;
+    letter-spacing: -0.2px;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  &__link--active {
+    color: #7e7e82;
+    text-decoration: none;
+    list-style: none;
+  }
+}
+
+.side_menu_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 0px;
+  padding-bottom: 47px;
+}
+
+/* Blur */
+
+.side_menu {
+  filter: none;
+}
+.side_menu * {
+  filter: none;
+}

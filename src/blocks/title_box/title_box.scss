@@ -1,0 +1,36 @@
+.title_box {
+  display: flex;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  color: #1B1C21;
+
+
+  &__highlight {
+    background-image: url("../img/highlight.svg");
+    background-repeat: no-repeat;
+    background-position: center left;
+      @media screen and (min-width: $breakpoint_note) {
+        background-position: 0 37%;
+      }
+    }
+
+  &__text {
+    padding-left: 16px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+
+    &--feedback {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: -0.6px;
+    }
+  }
+
+
+}

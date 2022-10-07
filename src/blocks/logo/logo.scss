@@ -1,0 +1,15 @@
+.logo {
+  /* flex: 1 1 auto; */
+  background-image: url("../img/logo.svg");
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  border: 0;
+  width: 97px;
+  height: 51px;
+  overflow: hidden;
+}
+
+.logo-wrapper {
+  padding-right: 16px;
+}

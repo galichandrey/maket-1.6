@@ -1,0 +1,46 @@
+/* contacts */
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  gap: 15px;
+  padding-top: 15px;
+}
+
+.contacts_links__group_1 {
+  display: flex;
+  gap: 16px;
+}
+
+.contacts_links__group_2 {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.email {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2;
+}
+
+.mailto {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2;
+  text-decoration: none;
+  color:#1B1C21;
+}
+
+.phone_number {
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  color:#1B1C21;
+}

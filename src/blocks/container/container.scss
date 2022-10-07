@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  transition: all;
+  transition-duration: 1000ms;
+  min-width: 320px;
+  // width: 100%;
+
+  @media screen and (min-width: $breakpoint_smartphone) {
+    width: 100%;
+  }
+  @media screen and (min-width: $breakpoint_tablet) {
+    width: 100%;
+  }
+  @media screen and (min-width: $breakpoint_pc) {
+    max-width: $breakpoint_pc;
+  }
+
+  &__nav {
+    display: flex;
+    background-color: #fff;
+
+    transition: all;
+    transition-duration: 1000ms;
+
+    @media screen and (min-width: $breakpoint_note) {
+
+      transition: all;
+      transition-duration: 1000ms;
+
+      display: flex;
+      flex-direction: row;
+
+      min-width: 120px;
+      max-width: 360px;
+      // flex-basis: $breakpoint_smartphone;
+      // flex-grow: 1;
+      // flex-shrink: 1;
+      height: 100%;
+      // height: 100vh;
+
+      // background-color: #00f;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: $breakpoint_smartphone;
+    // max-width: $breakpoint_note;
+
+    // flex-basis: $breakpoint_note;
+    // flex-grow: 3;
+    // flex-shrink: 3;
+
+    transition: all;
+    transition-duration: 1000ms;
+
+    // gap: 32px;
+    // border-right: 3px solid #f00;
+    // background-color: #0f0;
+  }
+
+
+
+}
+
+.container__inner {
+  padding-bottom: 23px;
+  // max-width: $breakpoint_note;
+  @media screen and (min-width: $breakpoint_tablet) {
+    // min-width: 100%;
+  }
+}
+

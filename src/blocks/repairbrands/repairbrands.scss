@@ -1,0 +1,129 @@
+.repairbrands {
+
+
+  &__inner {
+    display: flex;
+    // flex-direction: column;
+    padding: 30px;
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      height: 195px;
+    }
+
+    &--showall {
+
+      @media screen and (min-width: $breakpoint_tablet) {
+        // height: 400px;
+        height: 100%;
+        transition-duration: 1000ms;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    @include header;
+
+    // @media screen and (min-width: $breakpoint_tablet) {
+    //   display: flex;
+    //   flex-direction: column;
+    //   gap: 0px;
+    //   border-radius: 6px;
+    //   background-color: #f8f8f8;
+    //   font-size: 14px;
+    //   line-height: 18px;
+    //   letter-spacing: 0.2px;
+    //   color: #1b1c21;
+    // }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1b1c21;
+    gap: 20px;
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      flex-wrap: wrap;
+      justify-content: stretch;
+      gap: 20px 24px;
+    }
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      flex-wrap: wrap;
+      justify-content: stretch;
+      gap: 20px 34px;
+    }
+
+  }
+
+  &__element {
+    display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: space-between;
+
+    width: 224px;
+    min-width: 224px;
+    flex-basis: 224px;
+    height: 72px;
+    min-height: 72px;
+
+    // position: relative;
+    // padding: 16px;
+    background-color: #fff;
+    border-radius: 6px;
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      width: 240px;
+      min-width: 240px;
+      flex-basis: 72px;
+
+    }
+
+    &--grey {
+      background-color: #f8f8f8;
+      border: 0;
+    }
+  }
+
+
+  // &__button-field {
+  //   min-width: 120px;
+  // }
+
+  &__button {
+    display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // background-color: #ff3e79;
+    // border-radius: 16px;
+    min-width: 100%;
+    width: 100%;
+    // height: 40px;
+    // position: absolute;
+    // right: 20px;
+    // bottom: 20px;
+
+    // &--brands-between {
+    //   width: 100%;
+    //   justify-content: space-between;
+    //   align-items: center;
+
+    // }
+
+    &--showall {
+
+      @media screen and (max-width: 767.9px){
+        display: none;
+      }
+    }
+
+  }
+}

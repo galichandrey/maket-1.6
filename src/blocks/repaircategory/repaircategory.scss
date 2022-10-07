@@ -1,0 +1,122 @@
+.repaircategory {
+
+
+  &__inner {
+    display: flex;
+    // flex-direction: row;
+    // flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
+
+    @media screen and (min-width: $breakpoint_smartphone) {
+      display: flex;
+      // flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      display: flex;
+      // flex-direction: row;
+      justify-content: flex-start;
+
+      height: 195px;
+    }
+
+    &--showall {
+      height: 100%;
+    }
+  }
+
+
+  &__header {
+  display: flex;
+  @include header;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1b1c21;
+    gap: 20px;
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      flex-wrap: wrap;
+      // justify-content: stretch;
+      gap: 20px 24px;
+    }
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      flex-wrap: wrap;
+      // justify-content: stretch;
+      gap: 20px 34px;
+    }
+  }
+
+  &__element {
+    display: flex;
+    min-width: 240px;
+    width: 240px;
+    min-height: 160px;
+    height: 160px;
+    flex-basis: 240px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      min-width: 224px;
+      width: 224px;
+    }
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      min-width: 240px;
+      width: 240px;
+    }
+
+
+
+
+    &--grey {
+      background-color: #f8f8f8;
+      border: 0;
+    }
+
+  }
+
+
+  &__type {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+  }
+
+  &__button {
+    // background-color: #FFFFFF;
+    // border-radius: 50%;
+    // width: 24px;
+    // height: 24px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    &--showall {
+
+      @media screen and (max-width: 767.9px){
+        display: none;
+      }
+    }
+  }
+}

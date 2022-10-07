@@ -1,0 +1,216 @@
+.pricelist {
+
+  &__header {
+    display: flex;
+    @include header;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    padding-bottom: 50px;
+  }
+
+
+  &__title {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      border-radius: 6px;
+      background-color: $bg-color-2;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+      color: #1b1c21;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+    border-radius: 6px;
+    background-color: $bg-color-2;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1b1c21;
+    gap: 20px;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: column;
+      gap: 0;
+      max-width: 100%;
+
+    }
+  }
+
+  &__element {
+    display: flex;
+    width: 260px;
+    min-width: 260px;
+    flex-basis: 260px;
+    height: 200px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    padding: 16px;
+    background-color: $bg-color;
+    border-radius: 6px;
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-basis: 64px;
+      height: 64px;
+      min-height: 64px;
+      border-bottom: 1px solid #eaeaea;
+      border-radius: 0;
+
+      &:first-child {
+        border-radius: 6px 6px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 6px 6px;
+      }
+    }
+
+    &--grey {
+      background-color: $bg-color-2;
+      border: 0;
+    }
+  }
+
+  &__service-title,
+  &__service {
+    min-width: 150px;
+    flex-basis: 0;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: 150px;
+      flex-grow: 4;
+    }
+
+    &--hidden {
+      font-size: 14px;
+      line-height: 16px;
+      color: #7e7e82;
+
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &__service {
+    padding-bottom: 23px;
+
+    @media screen and (min-width: 768px) {
+      padding-bottom: 0px;
+    }
+  }
+
+  &__price-title,
+  &__price {
+    min-width: 80px;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: 75px;
+      flex-grow: 1;
+    }
+
+    &--hidden {
+      font-size: 14px;
+      line-height: 16px;
+      color: #7e7e82;
+
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &__price {
+    padding-bottom: 23px;
+
+    @media screen and (min-width: 768px) {
+      padding-bottom: 0px;
+    }
+  }
+
+  &__time-title,
+  &__time {
+    min-width: 75px;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: 75px;
+      flex-grow: 1;
+    }
+
+    &--hidden {
+      font-size: 14px;
+      line-height: 16px;
+      color: #7e7e82;
+
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &__button-field {
+    min-width: 120px;
+
+    @media screen and (min-width: 768px) {
+      min-width: 120px;
+      flex-grow: 1;
+    }
+  }
+
+  &__button {
+    background-color: $button-background-color-1;
+    border-radius: 16px;
+    width: 119px;
+    height: 32px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+      position: static;
+    }
+
+    &--showall {
+
+      @media screen and (max-width: 767.9px){
+        display: none;
+      }
+    }
+  }
+
+  &__legal {
+    display: flex;
+    width: 100%;
+    padding: 0 30px;
+    padding-top: 20px;
+
+    @media screen and (min-width: $breakpoint_tablet) {
+      width: 50%;
+
+    }
+  }
+
+  &__offer {
+    display: flex;
+    padding: 0 30px;
+    padding-top: 20px;
+    // align-self: flex-start;
+  }
+}

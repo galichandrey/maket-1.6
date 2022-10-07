@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  // width: 100%;
+  @media screen and (min-width: $breakpoint_note) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+}

@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Автор: Галич А.А.">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+</head>
+
+
+<body class="page_body">
+<!-- <div class="blurring blurred"></div> -->
+<div class="container">
+
+  <div class="container__nav">
+    <nav class="side_menu side_menu--mobile side_menu--closed">
+      <section class="side_menu_header" role="menu">
+        <div class="side_menu_header__group side_menu_header__group--left">
+          <div class="button">
+            <div class="button__inner">
+              <a href="#" class="button__link" aria-label="Закрыть">
+                <span class="button__icon button__icon--close"></span>
+              </a>
+            </div>
+          </div>
+          <!-- <div class="button_box">
+            <a href="#" class="button" role="menuitem" aria-label="Закрыть боковое меню">
+              <span class="button__icon button__icon--close"></span>
+            </a>
+          </div> -->
+          <div class="logo-wrapper">
+            <div class="logo"></div>
+          </div>
+        </div>
+
+        <div class="side_menu_header__group side_ыmenu_header__group--right">
+          <div class="button">
+            <div class="button__inner">
+              <a href="#" class="button__link" aria-label="Закрыть">
+                <span class="button__icon button__icon--search"></span>
+              </a>
+            </div>
+          </div>
+          <!-- <div class="button_box">
+            <a href="#" class="button" role="menuitem" aria-label="Открыть поиск">
+              <span class="button__icon button__icon--search"></span>
+            </a>
+          </div> -->
+        </div>
+
+      </section>
+
+      <section class="side_menu_main" role="menu">
+        <div class="side_menu_list">
+          <div class="side_menu_list__item">
+            <a href="#" class="side_menu_list__link" role="menuitem" aria-label="Ремонт техники">Ремонт техники</a>
+          </div>
+          <div class="side_menu_list__item">
+            <a href="#" class="side_menu_list__link" role="menuitem" aria-label="Услуги и сервисы">Услуги и сервисы</a>
+          </div>
+          <div class="side_menu_list__item">
+            <a href="#" class="side_menu_list__link" role="menuitem" aria-label="Корпоративным клиентам">Корпоративным клиентам</a>
+          </div>
+          <div class="side_menu_list__item">
+            <a href="#" class="side_menu_list__link" role="menuitem" aria-label="Продавцам техники">Продавцам техники</a>
+          </div>
+          <div class="side_menu_list__item">
+            <a href="#" class="side_menu_list__link" role="menuitem" aria-label="Партнерам">Партнерам</a>
+          </div>
+          <div class="side_menu_list__item">
+            <a href="#" class="side_menu_list__link" role="menuitem" aria-label="Производителям">Производителям</a>
+          </div>
+          <div class="side_menu_list__item">
+            <a href="#" class="side_menu_list__link" role="menuitem" aria-label="Наши сервисные центры">Наши сервисные центры</a>
+          </div>
+          <div class="side_menu_list__item">
+            <a href="#" class="side_menu_list__link" role="menuitem" aria-label="Контакты">Контакты</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="side_menu_footer">
+        <!-- это футер бокового меню -->
+        <div class="contacts">
+          <div class="contacts_links" role="menu">
+            <div class="contacts_links__group_1">
+              <div class="contacts_links__item button_box" role="menuitem">
+                <a href="#" class="button button_box__element" aria-label="Позвонить">
+                  <span class="button__icon button__icon--call"></span>
+                </a>
+              </div>
+              <div class="contacts_links__item button_box" role="menuitem">
+                <a href="#" class="button button_box__element" aria-label="Открыть чат">
+                  <span class="button__icon button__icon--chat"></span>
+                </a>
+              </div>
+              <div class="contacts_links__item button_box" role="menuitem">
+                <a href="#" class="button button_box__element" aria-label="Открыть ваш профиль">
+                  <span class="button__icon button__icon--profile"></span>
+                </a>
+              </div>
+            </div>
+            <div class="contacts_links__group_2">
+              <div class="email">
+                <a href="mailto:mail@cps.com" class="mailto" aria-label="Адрес электронной почты mail@cps.com">mail@cps.com</a>
+              </div>
+              <div class="phone_number">
+                <a href="tel: 8 800 890 8900" class="phone_number" aria-label="Номер телефона 8 800 890 8900">8 800 890 8900</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="language">
+          <div class="language--inner">
+            <div class="language__ru">
+              <a href="#" class="language__link--active" aria-label="Переключить на Русский язык">RU</a>
+            </div>
+            <div class="language__en">
+              <a href="#" class="language__link" aria-label="Switch to English">EN</a>
+            </div>
+            <div class="language__ch">
+              <a href="#" class="language__link" aria-label="汉语">CH</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </nav>
+  </div>
+
+  <div class="container__main">
+    <div class="container__inner">
+
+      <header class="header">
+        <nav class="nav" role="navigation">
+          <div class="nav__group_1 nav__group_1--hidden" role="menu">
+            <div class="button">
+              <div class="button__inner">
+                <a href="#" class="button__link" role="menuitem" aria-label="Открыть боковое меню">
+                  <span class="button__icon button__icon--burger"></span>
+                </a>
+              </div>
+            </div>
+
+            <!-- <div class="button_box">
+              <a href="#" class="button" role="menuitem" aria-label="Открыть боковое меню">
+                <span class="button__icon button__icon--burger"></span>
+              </a>
+            </div> -->
+
+            <div class="divider_box">
+              <div class="divider divider--left"></div>
+            </div>
+
+            <div class="logo-wrapper">
+              <div class="logo"></div>
+            </div>
+          </div>
+
+          <div class="nav__group_2 nav__group_2--hidden" role="menu">
+            <div class="button">
+              <div class="button__inner">
+                <a href="#" class="button__link" role="menuitem" aria-label="Позвонить">
+                  <span class="button__icon button__icon--call"></span>
+                </a>
+              </div>
+            </div>
+
+            <!-- <div class="button_box">
+              <a href="#" class="button button_box__element">
+                <span class="button__icon button__icon--call" role="menuitem" aria-label="Позвонить"></span>
+              </a>
+            </div> -->
+
+            <div class="button">
+              <div class="button__inner">
+                <a href="#" class="button__link" role="menuitem" aria-label="Открыть чат с сотрудником">
+                  <span class="button__icon button__icon--chat"></span>
+                </a>
+              </div>
+            </div>
+
+            <!-- <div class="button_box">
+              <a href="#" class="button button_box__element">
+                <span class="button__icon button__icon--chat" role="menuitem" aria-label="Открыть чат с сотрудником"></span>
+              </a>
+            </div> -->
+
+            <div class="button">
+              <div class="button__inner">
+                <a href="#" class="button__link" role="menuitem" aria-label="Открыть ваш профиль">
+                  <span class="button__icon button__icon--profile"></span>
+                </a>
+              </div>
+            </div>
+
+            <!-- <div class="button_box">
+              <a href="#" class="button button_box__element">
+                <span class="button__icon button__icon--profile" role="menuitem" aria-label="Открыть ваш профиль"></span>
+              </a>
+            </div> -->
+
+          </div>
+
+          <div class="nav__group_3" role="menu">
+            <div class="divider_box">
+              <div class="divider divider--right"></div>
+            </div>
+
+            <div class="button">
+              <div class="button__inner">
+                <a href="#" class="button__link button__link--gap--10" aria-label="Оставить заявку">
+                  <span class="button__text button__text--semibold button__text--hidden">Оставить заявку</span>
+                  <span class="button__icon button__icon--repair"></span>
+                </a>
+              </div>
+            </div>
+
+            <div class="button">
+              <div class="button__inner">
+                <a href="#" class="button__link button__link--gap--10" aria-label="Статус ремонта">
+                  <span class="button__text button__text--semibold button__text--hidden">Статус ремонта</span>
+                  <span class="button__icon button__icon--checkstatus"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <div class="title_box title_box--swaporder">
+          <div class="title_box__highlight">
+            <h1 class="title title_box__text">Услуги и сервисы</h1>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="slide_menu_container">
+          <nav class="slide_menu" role="navigation">
+            <ul class="slide_menu__list" role="menu">
+              <li class="button slide_menu__element--active">
+                <a href="#" class="slide_menu__link" role="menuitem" aria-label="Ремонтируемые бренды">Ремонтируемые бренды</a>
+              </li>
+              <li class="button slide_menu__element">
+                <a href="#" class="slide_menu__link" role="menuitem" aria-label="Ремонтируемые устройства">Ремонтируемые устройства</a>
+              </li>
+              <li class="button slide_menu__element">
+                <a href="#" class="slide_menu__link" role="menuitem" aria-label="Цены на услуги">Цены на услуги</a>
+              </li>
+              <li class="button slide_menu__element">
+                <a href="#" class="slide_menu__link" role="menuitem" aria-label="Адреса сервисных центров">Адреса сервисных центров</a>
+              </li>
+              <li class="button slide_menu__element">
+                <a href="#" class="slide_menu__link" role="menuitem" aria-label="Специальные цены">Специальные цены</a>
+              </li>
+              <li class="button slide_menu__element">
+                <a href="#" class="slide_menu__link" role="menuitem" aria-label="Отзывы">Отзывы</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <section class="section">
+          <article class="article">
+            <div class="article__text_container">
+              <div class="article__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+
+Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+              </div>
+
+
+              <div class="button article__link article__link--readmore">
+                <div class="button__inner">
+                  <a href="#" class="button__link" aria-label="Читать далее">
+                    <span class="button__text button__text--readmore">Читать далее</span>
+                    <span class="button__icon button__icon--readmore"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="article__image_container">
+              <img src="img/article_image.png" alt="Вывеска с логотипом фирмы CPS" role="img" aria-label="Фотография с изображением вывески с логотипом фирмы CPS" class="article__image"/>
+            </div>
+          </article>
+        </section>
+
+        <section class="repairbrands">
+          <header class="repairbrands__header">Ремонт техники различных брендов</header>
+          <div class="repairbrands__inner swiper swiper-container">
+            <div class="repairbrands__main swiper-wrapper">
+              <div class="repairbrands__element swiper-slide">
+                  <div class="button repairbrands__button repairbrands__button--brands-between">
+                    <div class="button__inner">
+                      <a href="#" class="button__link button__link--samsung" aria-label="Samsung">
+                        <img src="./img/samsung.png" alt="Samsung">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repairbrands__element swiper-slide">
+                  <div class="button repairbrands__button repairbrands__button--brands-between">
+                    <div class="button__inner">
+                      <a href="#" class="button__link button__link--samsung" aria-label="Samsung">
+                        <img src="./img/samsung.png" alt="Samsung">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repairbrands__element swiper-slide">
+                  <div class="button repairbrands__button repairbrands__button--brands-between">
+                    <div class="button__inner">
+                      <a href="#" class="button__link button__link--samsung" aria-label="Samsung">
+                        <img src="./img/samsung.png" alt="Samsung">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repairbrands__element swiper-slide">
+                  <div class="button repairbrands__button repairbrands__button--brands-between">
+                    <div class="button__inner">
+                      <a href="#" class="button__link button__link--samsung" aria-label="Samsung">
+                        <img src="./img/samsung.png" alt="Samsung">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repairbrands__element swiper-slide">
+                  <div class="button repairbrands__button repairbrands__button--brands-between">
+                    <div class="button__inner">
+                      <a href="#" class="button__link button__link--samsung" aria-label="Samsung">
+                        <img src="./img/samsung.png" alt="Samsung">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repairbrands__element swiper-slide">
+                  <div class="button repairbrands__button repairbrands__button--brands-between">
+                    <div class="button__inner">
+                      <a href="#" class="button__link button__link--samsung" aria-label="Samsung">
+                        <img src="./img/samsung.png" alt="Samsung">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repairbrands__element swiper-slide">
+                  <div class="button repairbrands__button repairbrands__button--brands-between">
+                    <div class="button__inner">
+                      <a href="#" class="button__link button__link--samsung" aria-label="Samsung">
+                        <img src="./img/samsung.png" alt="Samsung">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repairbrands__element swiper-slide">
+                  <div class="button repairbrands__button repairbrands__button--brands-between">
+                    <div class="button__inner">
+                      <a href="#" class="button__link button__link--samsung" aria-label="Samsung">
+                        <img src="./img/samsung.png" alt="Samsung">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repairbrands__element swiper-slide">
+                  <div class="button repairbrands__button repairbrands__button--brands-between">
+                    <div class="button__inner">
+                      <a href="#" class="button__link button__link--samsung" aria-label="Samsung">
+                        <img src="./img/samsung.png" alt="Samsung">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repairbrands__element swiper-slide">
+                  <div class="button repairbrands__button repairbrands__button--brands-between">
+                    <div class="button__inner">
+                      <a href="#" class="button__link button__link--samsung" aria-label="Samsung">
+                        <img src="./img/samsung.png" alt="Samsung">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repairbrands__element swiper-slide">
+                  <div class="button repairbrands__button repairbrands__button--brands-between">
+                    <div class="button__inner">
+                      <a href="#" class="button__link button__link--samsung" aria-label="Samsung">
+                        <img src="./img/samsung.png" alt="Samsung">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="button button--showall repairbrands__button--showall">
+            <div class="button__inner--showall">
+              <a href="#" class="button__link" aria-label="Показать все">
+                <!-- <img src="./img/samsung.png" alt="Samsung"> -->
+                <span class="button__icon button__icon--showall"></span>
+                <span class="button__text button__text--showall">Показать все</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="repaircategory">
+          <header class="repaircategory__header">Ремонт различных видов техники</header>
+          <div class="repaircategory__inner swiper swiper-container">
+
+            <div class="repaircategory__main swiper-wrapper">
+              <div class="repaircategory__element swiper-slide">
+                  <div class="repaircategory__type repaircategory__type--bold">Ремонтные услуги</div>
+                  <div class="button repaircategory__button">
+                    <div class="button__inner button__inner--big-pink">
+                      <a href="#" class="button__link" aria-label="Ремонтные услуги">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repaircategory__element swiper-slide">
+                  <div class="repaircategory__type repaircategory__type--bold">Ремонтные услуги</div>
+                  <div class="button repaircategory__button">
+                    <div class="button__inner button__inner--big-pink">
+                      <a href="#" class="button__link" aria-label="Ремонтные услуги">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repaircategory__element swiper-slide">
+                  <div class="repaircategory__type repaircategory__type--bold">Ремонтные услуги</div>
+                  <div class="button repaircategory__button">
+                    <div class="button__inner button__inner--big-pink">
+                      <a href="#" class="button__link" aria-label="Ремонтные услуги">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repaircategory__element swiper-slide">
+                  <div class="repaircategory__type repaircategory__type--bold">Ремонтные услуги</div>
+                  <div class="button repaircategory__button">
+                    <div class="button__inner button__inner--big-pink">
+                      <a href="#" class="button__link" aria-label="Ремонтные услуги">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repaircategory__element swiper-slide">
+                  <div class="repaircategory__type repaircategory__type--bold">Ремонтные услуги</div>
+                  <div class="button repaircategory__button">
+                    <div class="button__inner button__inner--big-pink">
+                      <a href="#" class="button__link" aria-label="Ремонтные услуги">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repaircategory__element swiper-slide">
+                  <div class="repaircategory__type repaircategory__type--bold">Ремонтные услуги</div>
+                  <div class="button repaircategory__button">
+                    <div class="button__inner button__inner--big-pink">
+                      <a href="#" class="button__link" aria-label="Ремонтные услуги">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repaircategory__element swiper-slide">
+                  <div class="repaircategory__type repaircategory__type--bold">Ремонтные услуги</div>
+                  <div class="button repaircategory__button">
+                    <div class="button__inner button__inner--big-pink">
+                      <a href="#" class="button__link" aria-label="Ремонтные услуги">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repaircategory__element swiper-slide">
+                  <div class="repaircategory__type repaircategory__type--bold">Ремонтные услуги</div>
+                  <div class="button repaircategory__button">
+                    <div class="button__inner button__inner--big-pink">
+                      <a href="#" class="button__link" aria-label="Ремонтные услуги">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <div class="repaircategory__element swiper-slide">
+                  <div class="repaircategory__type repaircategory__type--bold">Ремонтные услуги</div>
+                  <div class="button repaircategory__button">
+                    <div class="button__inner button__inner--big-pink">
+                      <a href="#" class="button__link" aria-label="Ремонтные услуги">
+                        <span class="button__icon button__icon--arrow-pink"></span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="button button--showall repaircategory__button--showall">
+            <div class="button__inner--showall">
+              <a href="#" class="button__link" aria-label="Показать все">
+                <!-- <img src="./img/samsung.png" alt="Samsung"> -->
+                <span class="button__icon button__icon--showall"></span>
+                <span class="button__text button__text--showall">Показать все</span>
+              </a>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="pricelist">
+          <header class="pricelist__header">цены на услуги</header>
+          <div class="pricelist__inner swiper swiper-container">
+            <div class="pricelist__title">
+              <div class="pricelist__element pricelist__element--grey">
+                <div class="pricelist__service">Ремонтные услуги</div>
+                <div class="pricelist__price">Цена</div>
+                <div class="pricelist__time">Срок</div>
+                <div class="pricelist__button-field">&nbsp;</div>
+              </div>
+            </div>
+            <div class="pricelist__main swiper-wrapper">
+              <div class="pricelist__element swiper-slide">
+                  <div class="pricelist__service-title pricelist__service-title--hidden">Ремонтные услуги</div>
+                  <div class="pricelist__service">Диагностика</div>
+                  <div class="pricelist__price-title pricelist__price-title--hidden">Цена</div>
+                  <div class="pricelist__price">Бесплатно</div>
+                    <div class="pricelist__time-title pricelist__time-title--hidden">Срок</div>
+                    <div class="pricelist__time">30 мин</div>
+                    <div class="button pricelist__button">
+                      <div class="button__inner button__inner--big-pink">
+                        <a href="#" class="button__link" aria-label="Заказать">
+                          <span class="button__text button__text--boldcaps">Заказать</span>
+                          <span class="button__icon button__icon--arrow-small-white"></span>
+                        </a>
+                      </div>
+                    </div>
+              </div>
+              <div class="pricelist__element swiper-slide">
+                  <div class="pricelist__service-title pricelist__service-title--hidden">Ремонтные услуги</div>
+                  <div class="pricelist__service">Замена дисплея</div>
+                  <div class="pricelist__price-title pricelist__price-title--hidden">Цена</div>
+                  <div class="pricelist__price">1000 ₽</div>
+                    <div class="pricelist__time-title pricelist__time-title--hidden">Срок</div>
+                    <div class="pricelist__time">30-120 мин</div>
+                    <div class="button pricelist__button">
+                      <div class="button__inner button__inner--big-pink">
+                        <a href="#" class="button__link" aria-label="Заказать">
+                          <span class="button__text button__text--boldcaps">Заказать</span>
+                          <span class="button__icon button__icon--arrow-small-white"></span>
+                        </a>
+                      </div>
+                    </div>
+              </div>
+              <div class="pricelist__element swiper-slide">
+                  <div class="pricelist__service-title pricelist__service-title--hidden">Ремонтные услуги</div>
+                  <div class="pricelist__service">Замена полифонического динамика</div>
+                  <div class="pricelist__price-title pricelist__price-title--hidden">Цена</div>
+                  <div class="pricelist__price">1000 ₽</div>
+                    <div class="pricelist__time-title pricelist__time-title--hidden">Срок</div>
+                    <div class="pricelist__time">30-120 мин</div>
+                    <div class="button pricelist__button">
+                      <div class="button__inner button__inner--big-pink">
+                        <a href="#" class="button__link" aria-label="Заказать">
+                          <span class="button__text button__text--boldcaps">Заказать</span>
+                          <span class="button__icon button__icon--arrow-small-white"></span>
+                        </a>
+                      </div>
+                    </div>
+              </div>
+              <div class="pricelist__element swiper-slide">
+                  <div class="pricelist__service-title pricelist__service-title--hidden">Ремонтные услуги</div>
+                  <div class="pricelist__service">Тестирование с выдачей технического заключения</div>
+                  <div class="pricelist__price-title pricelist__price-title--hidden">Цена</div>
+                  <div class="pricelist__price">1000 ₽</div>
+                    <div class="pricelist__time-title pricelist__time-title--hidden">Срок</div>
+                    <div class="pricelist__time">30-120 мин</div>
+                    <div class="button pricelist__button">
+                      <div class="button__inner button__inner--big-pink">
+                        <a href="#" class="button__link" aria-label="Заказать">
+                          <span class="button__text button__text--boldcaps">Заказать</span>
+                          <span class="button__icon button__icon--arrow-small-white"></span>
+                        </a>
+                      </div>
+                    </div>
+              </div>
+              <div class="pricelist__element swiper-slide">
+                  <div class="pricelist__service-title pricelist__service-title--hidden">Ремонтные услуги</div>
+                  <div class="pricelist__service">Замена программного обеспечения</div>
+                  <div class="pricelist__price-title pricelist__price-title--hidden">Цена</div>
+                  <div class="pricelist__price">1000 ₽</div>
+                    <div class="pricelist__time-title pricelist__time-title--hidden">Срок</div>
+                    <div class="pricelist__time">30-120 мин</div>
+                    <div class="button pricelist__button">
+                      <div class="button__inner button__inner--big-pink">
+                        <a href="#" class="button__link" aria-label="Заказать">
+                          <span class="button__text button__text--boldcaps">Заказать</span>
+                          <span class="button__icon button__icon--arrow-small-white"></span>
+                        </a>
+                      </div>
+                    </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="pricelist__legal">
+            Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
+          </div>
+          <div class="pricelist__offer">
+            <div class="button">
+              <div class="button__inner">
+                <a href="#" class="button__link" aria-label="Получить коммерческое предложение">
+                  <span class="button__text button__text--legal">Получить коммерческое предложение</span>
+                  <span class="button__icon button__icon--arrow-small-pink"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <div class="footer__inner">
+
+          <div class="footer__copyright">
+              <div class="footer__date">
+                © 2019 CPS
+              </div>
+              <div class="footer__developers">
+                Разработано командой Apesong
+              </div>
+          </div>
+
+          <div class="footer__policy">
+            Политика конфиденциальности
+          </div>
+
+          <div class="footer__legal">
+            Информация, размещенная на данной странице, не является публичной офертой
+          </div>
+        </div>
+
+        <!-- возможно сюда вставлю footer -->
+      </footer>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="modal_feedback modal_feedback--closed">
+  <div class="modal_feedback__inner">
+    <div class="button modal_feedback__button--close">
+      <div class="button__inner">
+        <a href="#" class="button__link" aria-label="Закрыть">
+          <span class="button__icon button__icon--modalfeedback--close"></span>
+        </a>
+      </div>
+    </div>
+    <!-- <div class="button_box button_box--modal-close">
+      <a href="#" class="button button--close-modal" aria-label="Закрыть">
+        <span class="button__icon button__icon--close"></span>
+      </a>
+    </div> -->
+    <header class="title_box modal_feedback__header">
+      <div class="title_box__highlight">
+        <h1 class="title title_box__text title_box__text--feedback">
+          Обратная связь
+        </h1>
+      </div>
+    </header>
+    <div class="modal_feedback__main">
+      <form action="" class="form modal-feedback__form">
+        <input type="text" class="form__name" placeholder="Имя" aria-label="Имя" />
+        <input type="text" class="form__phone" placeholder="Телефон" aria-label="Телефон" />
+        <input type="text" class="form__email" placeholder="Электронная почта" aria-label="Электронная почта"/>
+        <textarea class="form__textarea" aria-label="Сообщение" placeholder="Сообщение"></textarea>
+
+        <div class="agreement">Нажимая “отправить”, вы даете согласие на <a href="" class="agreement__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="" class="agreement__link">политикой конфиденциальности</a></div>
+
+        <div class="button modal_feedback__button--submit">
+          <div class="button__inner">
+            <button type="submit" class="button__link button__link--round-pink" aria-label="Отправить">
+              <span class="button__text button__text--boldcaps">Отправить</span>
+              <span class="button__icon button__icon--arrow-small-white"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- <div class="button_box feedback-form__buttonbox">
+          <button type="submit" class="button button--submit_feedback" aria-label="Отправить">
+            <span class="button__text button__text--boldcaps button__text--hidden">Отправить</span>
+            <span class="button__icon button__icon--arrow-small-white"></span>
+          </button>
+        </div> -->
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal_call modal_call--closed">
+  <div class="modal_call__inner">
+    <div class="button modal_call__button--close">
+      <div class="button__inner">
+        <a href="#" class="button__link" aria-label="Закрыть">
+          <span class="button__icon button__icon--modalcall--close"></span>
+        </a>
+      </div>
+    </div>
+
+    <header class="title_box modal_call__header">
+      <div class="title_box__highlight">
+        <h1 class="title title_box__text title_box__text--feedback">
+          Заказать звонок
+        </h1>
+      </div>
+    </header>
+    <div class="modal_call__main">
+      <form action="" class="form modal-call__form">
+        <!-- <input type="text" class="form__name" placeholder="Имя" aria-label="Имя" /> -->
+        <input type="text" class="form__phone" placeholder="Телефон" aria-label="Телефон" />
+        <!-- <input type="text" class="form__email" placeholder="Электронная почта" aria-label="Электронная почта"/> -->
+        <!-- <textarea class="form__textarea" aria-label="Сообщение" placeholder="Сообщение"></textarea> -->
+
+        <div class="agreement">Нажимая “отправить”, вы даете согласие на <a href="" class="agreement__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="" class="agreement__link">политикой конфиденциальности</a></div>
+
+        <div class="button">
+          <div class="button__inner modal_call__button--submit">
+            <button type="submit" class="button__link button__link--round-pink" aria-label="Отправить">
+              <span class="button__text button__text--boldcaps">Отправить</span>
+              <span class="button__icon button__icon--arrow-small-white"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- <div class="button_box feedback-form__buttonbox">
+          <button type="submit" class="button button--submit_feedback" aria-label="Отправить">
+            <span class="button__text button__text--boldcaps button__text--hidden">Отправить</span>
+            <span class="button__icon button__icon--arrow-small-white"></span>
+          </button>
+        </div> -->
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
